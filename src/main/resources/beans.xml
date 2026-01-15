@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <context:component-scan base-package="org.example.demospring2"/>
+
+    <!--开启自动代理-->
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+</beans>
+
+
+
+
+<!--<bean name="user" class="org.example.demospring2.pojo.User">-->
+<!--    <property name="id" value="123"/>-->
+<!--    <property name="username" value="alice"/>-->
+<!--    <property name="password" value="jsis"/>-->
+<!--</bean>-->
+
+
+<!--<bean name="userServiceImpl" class="org.example.demospring2.impl.userServiceImpl">-->
+<!--    <constructor-arg name="dao" ref="dao"/>-->
+<!--</bean>-->
+
+<!--    <bean name="dao" class="org.example.demospring2.dao.mysqlDao">-->
+
+<!--    </bean>-->
+
