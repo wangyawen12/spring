@@ -3,17 +3,20 @@ package org.example.demospring2.impl;
 import org.example.demospring2.dao.AccountRepo;
 import org.example.demospring2.entity.Account;
 import org.example.demospring2.service.BankService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class BankServiceImpl implements BankService {
+    @Autowired
+    private AccountRepo repo;
 
-    private final AccountRepo repo;
-
-    public BankServiceImpl(AccountRepo repo) {
-        this.repo = repo;
-    }
+//    private final AccountRepo repo;
+//
+//    public BankServiceImpl(AccountRepo repo) {
+//        this.repo = repo;
+//    }
 
     @Transactional
     public void transfer(int fromId, int toId, int amount) {
